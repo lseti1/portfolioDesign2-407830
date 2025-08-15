@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './navigation-bar.css'
 })
 export class NavigationBar {
+  @Output() pageChange = new EventEmitter<string>();
   currentPage = 'about';
 
-  getPage(pageName: string) {
+  setPage(pageName: string) {
     this.currentPage = pageName;
+    this.pageChange.emit(pageName);
+    console.log(`Current page set to: ${pageName}`);
   }
 }
+
