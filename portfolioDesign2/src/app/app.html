@@ -1,7 +1,7 @@
 <div class="bg-black w-full h-[100vh] text-white tracking-tighter">
   <app-navigation-bar (pageChange)="getPage($event)"/>
 
-  <div class="absolute top-[25%] left-[25%] w-[50%] h-[50%] border flex justify-center items-start p-8">
+  <div class="absolute top-[25%] left-[25%] w-[50%] h-[50%] border p-8">
     @if (currentPage === 'About') {
       <app-about />
     } @else if (currentPage === 'Apps') {
