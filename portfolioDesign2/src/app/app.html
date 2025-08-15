@@ -2,15 +2,15 @@
   <app-navigation-bar (pageChange)="getPage($event)"/>
 
   <div class="absolute top-[25%] left-[25%] w-[50%] h-[50%] border flex justify-center items-start p-8">
-    @if (currentPage === 'about') {
+    @if (currentPage === 'About') {
       <app-about />
-    } @else if (currentPage === 'apps') {
+    } @else if (currentPage === 'Apps') {
       <app-apps />
-    } @else if (currentPage === 'design') {
+    } @else if (currentPage === 'Design') {
       <app-designs />
-    } @else if (currentPage === 'documents') {
+    } @else if (currentPage === 'Documents') {
       <app-documents />
-    } @else if (currentPage === 'experience') {
+    } @else if (currentPage === 'Experience') {
       <app-experience />
     } @else {
       <app-about />

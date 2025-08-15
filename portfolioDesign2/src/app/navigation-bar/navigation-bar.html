@@ -1,9 +1,39 @@
 <nav class="absolute top-[12%] left-[25%] w-[50%]">
     <ul class="flex flex-row justify-between px-4 font-bold text-4xl">
-        <li (click)="setPage('about')" class="border-b-8 border-gray-400/50 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white cursor-pointer duration-500 rounded-lg">About</li>
-        <li (click)="setPage('apps')" class="border-b-8 border-gray-400/50 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white cursor-pointer duration-500 rounded-lg">Apps</li>
-        <li (click)="setPage('design')" class="border-b-8 border-gray-400/50 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white cursor-pointer duration-500 rounded-lg">Designs</li>
-        <li (click)="setPage('documents')" class="border-b-8 border-gray-400/50 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white cursor-pointer duration-500 rounded-lg">Documents</li>
-        <li (click)="setPage('experience')" class="border-b-8 border-gray-400/50 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white cursor-pointer duration-500 rounded-lg">Experience</li>
+        <li (click)="setPage('About')"
+            class="border-b-8 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white/90 cursor-pointer duration-500 rounded-lg select-none"
+            [ngClass]="{
+                'text-white border-orange-500': currentPage === 'About', 
+                'text-gray-400/50 border-gray-400/50': currentPage !== 'About'
+            }">
+            About</li>
+        <li (click)="setPage('Apps')"
+            class="border-b-8 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white/90 cursor-pointer duration-500 rounded-lg select-none"
+            [ngClass]="{
+                'text-white border-orange-500': currentPage === 'Apps', 
+                'text-gray-400/50 border-gray-400/50': currentPage !== 'Apps'
+            }">
+            Apps</li>
+        <li (click)="setPage('Design')"
+            class="border-b-8 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white/90 cursor-pointer duration-500 rounded-lg select-none"
+            [ngClass]="{
+                'text-white border-orange-500': currentPage === 'Design',
+                'text-gray-400/50 border-gray-400/50': currentPage !== 'Design'
+            }">
+            Designs</li>
+        <li (click)="setPage('Documents')"
+            class="border-b-8 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white/90 cursor-pointer duration-500 rounded-lg select-none"
+            [ngClass]="{
+                'text-white border-orange-500': currentPage === 'Documents', 
+                'text-gray-400/50 border-gray-400/50': currentPage !== 'Documents'
+            }">
+            Documents</li>
+        <li (click)="setPage('Experience')"
+            class="border-b-8 p-2 hover:border-orange-500 text-gray-400/50 hover:text-white/90 cursor-pointer duration-500 rounded-lg select-none"
+            [ngClass]="{
+                'text-white border-orange-500': currentPage === 'Experience', 
+                'text-gray-400/50 border-gray-400/50': currentPage !== 'Experience'
+            }">
+            Experience</li>
     </ul>
 </nav>

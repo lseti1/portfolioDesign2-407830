@@ -15,7 +15,7 @@ import { NavigationBar } from './navigation-bar/navigation-bar';
 })
 export class App {
   protected readonly title = signal('my-angular-app');
-  currentPage = 'about';
+  currentPage = 'About';
 
   getPage(pageName: string) {
     console.log(`Navigating to: ${pageName}`);
