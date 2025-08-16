@@ -1,7 +1,7 @@
 <div class="relative w-full h-[100vh] text-white tracking-tighter bg-[url('/assets/images/background.webp')] bg-[length:100%_100%]">
   <app-navigation-bar (pageChange)="getPage($event)"/>
 
-  <div class="absolute top-[30%] left-[25%] w-[50%] h-[50%] rounded-lg p-2">
+  <div class="absolute top-[30%] left-[25%] w-[50%] h-[50%] rounded-lg">
     @if (currentPage === 'About') {
       <app-about />
     } @else if (currentPage === 'Apps') {
