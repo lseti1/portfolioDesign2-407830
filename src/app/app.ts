@@ -9,6 +9,8 @@ import { NavigationBar } from './navigation-bar/navigation-bar';
 import { Quicklinks } from './quicklinks/quicklinks';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+type Page = 'About' | 'Apps' | 'Designs' | 'Experience' | 'Documents';
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, About, Apps, Designs, Documents, Experience, NavigationBar, Quicklinks, FontAwesomeModule],
@@ -17,10 +19,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class App {
   protected readonly title = signal('my-angular-app');
-  currentPage = 'About';
+  currentPage = signal<Page>('About');
 
-  getPage(pageName: string) {
+  getPage(pageName: Page) {
     console.log(`Navigating to: ${pageName}`);
-    this.currentPage = pageName;
+    this.currentPage.set(pageName);
   }
 }
